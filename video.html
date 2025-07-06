@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Magical Moment 🎥</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 40px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: deeppink;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 8px hotpink;
+    }
+
+    .message {
+      color: #ff1493;
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      text-shadow: 0 0 6px pink;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .video-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      max-width: 90%;
+      border: 6px solid #ff69b4;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ff69b4;
+      padding: 10px;
+      background-color: white;
+    }
+
+    video {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+    }
+
+    .btn {
+      margin-top: 40px;
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 12px deeppink;
+      display: inline-block;
+    }
+
+    /* Optional: Loading heart animation */
+    #loader {
+      font-size: 2rem;
+      color: hotpink;
+      animation: beat 0.6s infinite alternate;
+      margin-top: 80px;
+    }
+
+    @keyframes beat {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="loader">❤️ Loading your beautiful moment...</div>
+
+  <div id="mainContent" style="display: none;">
+    <h1>My Magical Moment 😚😁</h1>
+    <p class="message">Press play to feel the magic 💕</p>
+
+    <div class="video-box">
+      <video controls>
+        <source src="assets/video.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <a class="btn" href="letter.html">Next ➜</a>
+  </div>
+
+  <script>
+    // Simulate 2s loading
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+    }, 2000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Love Quiz 💕</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      font-family: 'Comic Sans MS', cursive;
+      padding: 30px;
+      color: #d63384;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: deeppink;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px hotpink;
+    }
+
+    .quiz-container {
+      max-width: 700px;
+      margin: auto;
+      text-align: left;
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px #ff69b4;
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    .question h3 {
+      color: #ff1493;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      color: white;
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      text-decoration: none;
+      box-shadow: 0 0 10px deeppink;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 25px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #e91e63;
+      text-shadow: 0 0 5px pink;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💘 Love Quiz for My Piruu 💘</h1>
+
+  <div class="quiz-container" id="quiz">
+
+    <div class="question">
+      <h3>1. Hamari pehli call kab tak chali thi? ☎️</h3>
+      <label><input type="radio" name="q1" value="0"> 30 mins</label>
+      <label><input type="radio" name="q1" value="1"> 4 hours</label>
+      <label><input type="radio" name="q1" value="0"> 1.5 hours</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Nitin tumse roz kya kehta hai? 💬</h3>
+      <label><input type="radio" name="q2" value="0"> Khaana khaya?</label>
+      <label><input type="radio" name="q2" value="1"> Love you forever 💖</label>
+      <label><input type="radio" name="q2" value="0"> So gayi kya?</label>
+    </div>
+
+    <div class="question">
+      <h3>3. Piruu ka mood kaise change hota hai? 🥺</h3>
+      <label><input type="radio" name="q3" value="1"> Pyaar bhare shabd se 💕</label>
+      <label><input type="radio" name="q3" value="0"> Ignore karne se</label>
+      <label><input type="radio" name="q3" value="0"> Kittu ke pyaar se😚</label>
+    </div>
+
+    <div class="question">
+      <h3>4. Kittu ko sabse zyada pyaara kya lagta hai? 😍</h3>
+      <label><input type="radio" name="q4" value="0"> Chocolates</label>
+      <label><input type="radio" name="q4" value="0"> Dogs</label>
+      <label><input type="radio" name="q4" value="1"> Piruu ka chehra 😘</label>
+    </div>
+
+    <div class="question">
+      <h3>5. Future mein hum kaha chalenge? ✈️</h3>
+      <label><input type="radio" name="q5" value="1"> Goa or Paris 💑</label>
+      <label><input type="radio" name="q5" value="0"> Library</label>
+      <label><input type="radio" name="q5" value="0"> Ghr rahenge</label>
+    </div>
+
+    <button class="btn" onclick="calculateScore()">Check My Score ❤️</button>
+
+    <div id="result"></div>
+  </div>
+
+  <a class="btn" href="final.html">Final Surprise ➜</a>
+
+  <script>
+    function calculateScore() {
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const q = document.querySelector(`input[name="q${i}"]:checked`);
+        if (q) score += parseInt(q.value);
+      }
+
+      const result = document.getElementById('result');
+      if (score === 5) {
+        result.innerText = "💖 Perfect Match! Tum meri soul mate ho, Piruu! 🥺";
+      } else if (score >= 3) {
+        result.innerText = "💘 So close! Tum mujhe bahut achhi tarah jaanti ho 😍";
+      } else {
+        result.innerText = "🥹 Koi na... tu toh meri hi hai hamesha 💞";
+      }
+    }
+  </script>
+
+</body>
+</html>

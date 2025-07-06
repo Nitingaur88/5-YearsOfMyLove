@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Beautiful Piruu 📸</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      font-family: 'Comic Sans MS', cursive;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      color: deeppink;
+      text-shadow: 0 0 10px hotpink;
+      margin-bottom: 10px;
+    }
+
+    .glow-text {
+      font-size: 1.2rem;
+      color: #ff69b4;
+      text-shadow: 0 0 8px #ff69b4;
+      margin-bottom: 30px;
+    }
+
+    .gallery-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+      scroll-snap-type: x mandatory;
+      justify-content: center;
+    }
+
+    .photo-box {
+      flex: 0 0 auto;
+      width: 220px;
+      scroll-snap-align: center;
+      border-radius: 20px;
+      transition: transform 0.3s;
+    }
+
+    .photo-box img {
+      width: 100%;
+      border-radius: 20px;
+      border: 4px solid #ff69b4;
+      box-shadow: 0 0 15px #ff69b4;
+    }
+
+    .photo-box:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      margin-top: 40px;
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 12px deeppink;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 My Beautiful Piruu 💖</h1>
+  <p class="glow-text">Tumare chehre mein hi meri poori duniya basti hai 🥺</p>
+
+  <div class="gallery-slider">
+
+    <div class="photo-box">
+      <img src="assets/photo1.jpg" alt="Piruu 1">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo2.jpg" alt="Piruu 2">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo4.jpg" alt="Piruu 3">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo5.jpeg" alt="Piruu 4">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo6.jpeg" alt="Piruu 5">
+    </div>
+    
+    <div class="photo-box">
+      <img src="assets/photo7.jpeg" alt="Piruu 1">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo8.jpeg" alt="Piruu 2">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo11.jpeg" alt="Piruu 3">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo12.jpeg" alt="Piruu 4">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo13.jpeg" alt="Piruu 5">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo15.jpeg" alt="Piruu 1">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo16.jpeg" alt="Piruu 2">
+    </div>
+
+    <div class="photo-box">
+      <img src="assets/photo19.jpeg" alt="Piruu 3">
+    </div>
+
+  </div>
+
+  <a class="btn" href="video.html">Next ➜</a>
+
+</body>
+</html>

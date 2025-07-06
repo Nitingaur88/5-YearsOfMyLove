@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Journey ❤️</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      text-align: center;
+      color: #ff1493;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 8px deeppink;
+    }
+
+    #daysCounter {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: deeppink;
+      text-shadow: 0 0 12px hotpink;
+    }
+
+    .message {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #d63384;
+      text-shadow: 0 0 5px pink;
+    }
+
+    .btn {
+      margin-top: 20px;
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 12px deeppink;
+      display: inline-block;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .hearts span {
+      position: absolute;
+      display: block;
+      color: #ff69b4;
+      font-size: 24px;
+      animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hearts" id="heartsContainer"></div>
+
+  <h1>❤️ Our Journey So Far ❤️</h1>
+  <div id="daysCounter">0000 Days</div>
+  <p class="message">7 July 2020 se lekar aaj tak... har din sirf tumhaara 🥺</p>
+
+  <a class="btn" href="gallery.html">Next ➜</a>
+
+  <script>
+    // Calculate days since 7 July 2020
+    const startDate = new Date("2020-07-07");
+    const today = new Date();
+    const diffTime = Math.abs(today - startDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    document.getElementById("daysCounter").innerText = `${diffDays} Days`;
+
+    // Heart rain effect
+    const heartsContainer = document.getElementById('heartsContainer');
+    function createHeart() {
+      const heart = document.createElement('span');
+      heart.innerText = '💗';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (2 + Math.random() * 4) + 's';
+      heart.style.fontSize = (16 + Math.random() * 20) + 'px';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>

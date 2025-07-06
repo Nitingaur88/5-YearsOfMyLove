@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Letter for You 💌</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+      font-family: 'Comic Sans MS', cursive;
+      padding: 30px;
+      color: deeppink;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: hotpink;
+      text-shadow: 0 0 10px pink;
+      margin-bottom: 30px;
+    }
+
+    .letter-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px #ff69b4;
+      position: relative;
+      z-index: 2;
+    }
+
+    .line {
+      font-size: 1.3rem;
+      opacity: 0;
+      transition: opacity 0.8s ease-in;
+      margin: 15px 0;
+      color: #d63384;
+      text-shadow: 0 0 6px #ffa5d8;
+    }
+
+    .btn {
+      display: block;
+      margin: 40px auto 0;
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 12px deeppink;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Letter for My Piruu 💌</h1>
+
+  <div class="letter-container" id="letterBox">
+
+    <div class="line">My Dearest Piruu ❤️🥹</div>
+    <div class="line">5 saal ho gaye… aur lagta hai kal ki hi baat hai jab tum meri duniya bani thi.🌍</div>
+    <div class="line">Tumhare bina sab kuch adhura sa lagta hai, jaise har subah mein suraj ho par roshni na ho...</div>
+    <div class="line">Tum mere din ki roshni ho, tum meri har dua ka jawaab ho…</div>
+    <div class="line">Jab bhi zindagi thak jaati hai, tum meri muskaan ban jaati ho.</div>
+
+    <div class="line">Main jaanta hoon, kabhi kabhi kuch baatein rula deti hain…</div>
+    <div class="line">Par tum yaad rakhna — chahe duniya saari palat jaaye,</div>
+    <div class="line">main hamesha tumhare saath rahunga…</div>
+    <div class="line">Hamesha. Har pal. Har janam. Har saans mein.</div>
+
+    <div class="line">Tum bas mere saath chalti rehna… 🥺</div>
+    <div class="line">Baaki saari duniya ko main jeet lunga — tumhari muskaan ke liye ❤️</div>
+
+    <div class="line">Love you beyond words,</div>
+    <div class="line">– Tumhara pagal sa Nitin 💌</div>
+
+  </div>
+
+  <a class="btn" href="quiz.html">Next ➜</a>
+
+  <script>
+    // Line-by-line reveal
+    const lines = document.querySelectorAll('.line');
+    lines.forEach((line, i) => {
+      setTimeout(() => {
+        line.style.opacity = 1;
+      }, i * 2000);
+    });
+  </script>
+
+</body>
+</html>
